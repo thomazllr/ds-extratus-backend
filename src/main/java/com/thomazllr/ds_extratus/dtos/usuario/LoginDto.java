@@ -1,4 +1,6 @@
 package com.thomazllr.ds_extratus.dtos.usuario;
 
-public record LoginDto(String cpf, String senha) {
+import org.hibernate.validator.constraints.br.CPF;
+
+public record LoginDto(@CPF(message = "Por favor, insira um cpf válido")String cpf, String senha) {
 }
