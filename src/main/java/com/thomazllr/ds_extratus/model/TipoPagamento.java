@@ -1,21 +1,20 @@
 package com.thomazllr.ds_extratus.model;
 
+
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-public class Profissao {
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class TipoPagamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
