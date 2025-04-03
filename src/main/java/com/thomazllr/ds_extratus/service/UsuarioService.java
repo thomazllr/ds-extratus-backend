@@ -1,6 +1,7 @@
 package com.thomazllr.ds_extratus.service;
 
 import com.thomazllr.ds_extratus.config.security.TokenService;
+import com.thomazllr.ds_extratus.dtos.usuario.LoginDto;
 import com.thomazllr.ds_extratus.dtos.usuario.UsuarioRequest;
 import com.thomazllr.ds_extratus.dtos.usuario.UsuarioResponse;
 import com.thomazllr.ds_extratus.model.Usuario;
@@ -19,14 +20,14 @@ public class UsuarioService {
     private final PasswordEncoder passwordEncoder;
 
 
-    public UsuarioResponse login(UsuarioRequest request) {
+    public UsuarioResponse login(LoginDto request) {
         var usuario = usuarioRepository.findByCpf(request.cpf()).orElseThrow(() -> new RuntimeException("Usuario nao encontrado"));
 
         if (!passwordEncoder.matches(request.senha(), usuario.getSenha())) {
             return null;
         }
         String token = tokenService.generateToken(usuario);
-        return new UsuarioResponse(request.nome(), request.cpf(), token);
+        return new UsuarioResponse(usuario.getNome(), usuario.getCpf(), token);
 
     }
 
