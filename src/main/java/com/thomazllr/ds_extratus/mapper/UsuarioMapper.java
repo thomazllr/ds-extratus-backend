@@ -1,6 +1,6 @@
 package com.thomazllr.ds_extratus.mapper;
 
-import com.thomazllr.ds_extratus.dtos.usuario.UsuarioResponse;
+import com.thomazllr.ds_extratus.dto.usuario.UsuarioResponse;
 import com.thomazllr.ds_extratus.model.Usuario;
 import org.springframework.stereotype.Component;
 

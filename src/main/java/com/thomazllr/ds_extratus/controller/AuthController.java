@@ -1,8 +1,8 @@
 package com.thomazllr.ds_extratus.controller;
 
-import com.thomazllr.ds_extratus.dtos.usuario.LoginDto;
-import com.thomazllr.ds_extratus.dtos.usuario.UsuarioRequest;
-import com.thomazllr.ds_extratus.dtos.usuario.UsuarioResponse;
+import com.thomazllr.ds_extratus.dto.usuario.LoginDto;
+import com.thomazllr.ds_extratus.dto.usuario.UsuarioRequest;
+import com.thomazllr.ds_extratus.dto.usuario.UsuarioResponse;
 import com.thomazllr.ds_extratus.model.Usuario;
 import com.thomazllr.ds_extratus.service.UsuarioService;
 import lombok.RequiredArgsConstructor;

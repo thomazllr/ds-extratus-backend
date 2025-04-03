@@ -1,4 +1,4 @@
-package com.thomazllr.ds_extratus.dtos.usuario;
+package com.thomazllr.ds_extratus.dto.usuario;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

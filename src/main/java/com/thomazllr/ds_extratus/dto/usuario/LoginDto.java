@@ -1,4 +1,4 @@
-package com.thomazllr.ds_extratus.dtos.usuario;
+package com.thomazllr.ds_extratus.dto.usuario;
 
 import org.hibernate.validator.constraints.br.CPF;
 
