@@ -8,5 +8,5 @@ RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
-
-CMD ["java", "-jar", "target/seu-app.jar"]
+# Ajuste o nome para corresponder ao seu arquivo JAR real
+CMD ["java", "-jar", "target/ds-extratus-0.0.1-SNAPSHOT.jar"]
