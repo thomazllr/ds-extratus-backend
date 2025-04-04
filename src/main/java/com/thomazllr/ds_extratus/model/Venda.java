@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-class Venda {
+public class Venda {
 
     @Id
     @GeneratedValue

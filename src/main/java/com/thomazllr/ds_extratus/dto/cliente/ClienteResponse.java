@@ -8,12 +8,13 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Builder
-public record ClienteResponse(String nome, String email, LocalDate dataNascimento, String cpf,
+public record ClienteResponse(Long id, String nome, String email, LocalDate dataNascimento, String cpf,
                               List<ProfissaoResponse> profissoes) {
 
     public static ClienteResponse toResponse(Cliente cliente) {
         return ClienteResponse
                 .builder()
+                .id(cliente.getId())
                 .nome(cliente.getNome())
                 .email(cliente.getEmail())
                 .cpf(cliente.getCpf())
